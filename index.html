@@ -1,0 +1,27 @@
+<!-- No need for script tag in here (the src index.html) when using HTMLWebpackPlugin-->
+
+<!-- 
+  My issue with HTML webpack plugin was that the template was pointing to index.ejs by default, 
+  had to set it to ./src/index.html. make sure you always do this template 
+  The plugin rewrites this file from src and generates a new index.html in dist just in case we rename any entry points
+  The index.html file in dist is literally just a copy of the one in src. 
+ -->
+
+<!-- 
+  Without the plugin, it works fine too.
+  You just need one index.html file, always make it in src, 
+  comment out htmlwebpackplugin in webpack.config.js, and put -> script src = "main.js" defer <- in here
+  It works the same but doesn't make a new index.html file in dist 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Restaurant Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
