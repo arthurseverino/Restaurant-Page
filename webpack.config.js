@@ -1,5 +1,5 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -25,5 +25,5 @@ module.exports = {
   devServer: {
     static: './src',
   },
-  // plugins: [new HtmlWebpackPlugin({ title: 'Restaurant Page'})],
+  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
 };

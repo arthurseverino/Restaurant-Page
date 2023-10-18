@@ -6,24 +6,40 @@
   margin: 0;
 }
 
-
 #container {
   border: 5px solid blue;
   color: blue;
-  width:100vw;
-  height:100vh;
-  display:flex;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  background-color: skyblue;
-
+  align-items: center;
+  background-color: wheat;
 }
 
 .content-container {
   border: 1px solid green;
   color: green;
+  height: 100%;
+  width: 80%;
 }
 
 .heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid red;
-  color:red
+  width: 25rem;
+  height: 6rem;
+}
+
+button {
+  border-radius: 8px;
+  background-color: maroon;
+  width: 25%;
+  height: 50%;
+}
+
+button:hover {
+  filter: brightness(90%);
 }
